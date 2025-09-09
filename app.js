@@ -1,7 +1,10 @@
 const express = require("express");
 const app = express();
+const newRouter = require("./routes/newRouter");
+const indexRouter = require("./routes/indexRouter");
 
-app.get("/", (req, res) => res.send("Hello, world!"));
+app.use("/new", newRouter);
+app.use("/", indexRouter);
 
 const PORT = 3000;
 app.listen(PORT, (error) => {
