@@ -1,0 +1,15 @@
+<html>
+
+<body>
+    <p>Message ID: <%= messageID%>
+    </p>
+    <h3>
+        <%= message.user ? message.user : "Anonymous" %> - <%= message.added%>
+                </h6>
+                <p>
+                    <%= message.text %>
+                </p>
+                <a href="/">Go Back</a>
+</body>
+
+</html>

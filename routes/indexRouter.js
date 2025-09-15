@@ -29,7 +29,7 @@ indexRouter.post("/new", (req, res) => {
 
 indexRouter.get("/:messageID", (req, res) => {
     const { messageID } = req.params;
-    res.send(`Message ID: ${messageID}`);
+    res.render("message_details", { messageID: messageID, message: messages[messageID] });
 });
 
 module.exports = indexRouter;
